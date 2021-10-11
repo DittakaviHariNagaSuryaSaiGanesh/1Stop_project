@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19 Sep, 2021, 7:13:32 AM
+    Author     : saiga
+*/
+
+.body
+{
+    background: black;
+}
+.sidenav 
+{
+    height: 100%; 
+    width: 200px; 
+    position: fixed; 
+    z-index: 9; 
+    top: 0; 
+    left: 0;
+    background-color: lightgoldenrodyellow; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.sidenav a 
+{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover 
+{
+    color: black;
+}
+
+
+.main
+{
+    margin-left: 45px; 
+    padding: 10px;
+}
+
+@media screen and (max-height: 450px) 
+{
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
