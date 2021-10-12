@@ -14,10 +14,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="stylle2.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style@480.css">
-        <link rel="stylesheet" href="style@360.css">
-        <link rel="stylesheet" href="style@1024.css">-->
         <?php
             session_start();
             if(empty($_SESSION['test'])) 
@@ -37,9 +33,13 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="container" style="margin-left: 47rem">
+                    <form method="POST" action="config_logout.php">
+                        <button type="submit" class="btn-danger" name="logout">Logout</button>
+                    </form>
+                </div>
             </nav>
         </div>
-        
         <div class="sidenav">
             <div class="active">
                 <a href="#index1">Jobs</a>

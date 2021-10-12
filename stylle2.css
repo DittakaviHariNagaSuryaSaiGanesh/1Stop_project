@@ -47,6 +47,13 @@ and open the template in the editor.
     padding: 10px;
 }
 
+.logout
+{
+    border: none;
+    float: left;
+    margin: 20px;
+}
+
 @media screen and (max-height: 450px) 
 {
     .sidenav {padding-top: 15px;}
