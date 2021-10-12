@@ -8,7 +8,7 @@
         </p>
         <div class="collapse" id="collapseExample">
             <div class="card card-body">
-                <form method="post" action="">
+                <form method="post" action="data.php">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Company Name</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" name="cname">
@@ -36,20 +36,6 @@
         </div>
     </div>
 </div>
-<?php
-    if (isset($_POST['submit']))
-    {
-        include 'config.php';
-        $cname = $_POST['cname'];
-        $pos = $_POST['pos'];
-        $jobdis = $_POST['jobdis'];
-        $ctc = $_POST['ctc'];
-
-        $query = "INSERT INTO `jobs`(`comname`, `position`, `jobdis`, `ctc`) "
-                . "VALUES ('$cname','$pos','$jobdis','$ctc')";
-        $result = mysqli_query($conn, $query);
-    }
-?>
 <div class="container">
     <table class="table table-striped">
         <thead>
@@ -61,21 +47,34 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>TCS</td>
-                <td>Software Developer</td>
-                <td>8LPA</td>
-            </tr>
-                    
-            <tr>
-                <th scope="row">2</th>
-                <td>GOOGLE</td>
-                <td>Web Developer</td>
-                <td>16LPA</td>
-            </tr>
+            <?php
+            include 'config.php';
+                $sql = "SELECT * FROM `jobs`";
+                $my_result = mysqli_query($conn, $sql);
+                
+                while($data = mysqli_fetch_assoc($my_result))
+                {
+            ?>
+                    <tr>
+                        <td>
+                            <?php echo $data['id']; ?>
+                        </td>
+                        <td>
+                            <?php echo $data['comname']; ?>
+                        </td>
+                        <td>
+                            <?php echo $data['position']; ?>
+                        </td>
+                        <td>
+                            <?php echo $data['ctc']; ?>
+                        </td>
+                    </tr>
+            <?php
+                }
+            ?>
         </tbody>
     </table>
+    <?php mysqli_close($conn); ?>
  </div>
 <!--</body>
 </html>-->

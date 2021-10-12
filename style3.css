@@ -1,0 +1,23 @@
+.content
+{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq8sgy-NAkZF2pW2KYc2zkHg4NO-BKt8C9Fg&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    padding-left: 8rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+.content h1
+{
+    font-size: 40px;
+    font-family: monospace;
+}
+
+.content small
+{
+    font-size: 18px;
+}

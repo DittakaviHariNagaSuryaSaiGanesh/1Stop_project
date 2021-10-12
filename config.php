@@ -2,9 +2,9 @@
     $server ='localhost';
     $username = 'root';
     $password = '';
-    $daset = 'jobs';
+    $dataset = 'jobs';
     
-    $conn = mysqli_connect($server, $username, $password, $daset)
+    $conn = mysqli_connect($server, $username, $password, $dataset)
     or
     die('Connection failed'.$conn);
 ?>
