@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashbord</title>
+        <title>Admin Dashbord</title>
 <!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
@@ -42,9 +42,9 @@
         </div>
         <div class="sidenav">
             <div class="active">
-                <a href="#index1">Jobs</a>
+                <a href="index.php">Jobs</a>
             </div>
-            <a href="#jobs">Candidates Applied</a>
+            <a href="applicants.php">Candidates Applied</a>
             <a href="">Services</a>
             <a href="">Contact</a>
         </div>
