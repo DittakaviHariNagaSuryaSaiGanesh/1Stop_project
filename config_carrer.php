@@ -10,5 +10,21 @@
     $sql = "INSERT INTO `applicants`(`Name`, `Roal`, `Email`, `Phone`, `Qualification`, `YOP`) "
             . "VALUES ('$name','$role','$mail','$phone','$qual','$yop')";
     $result = mysqli_query($conn, $sql);
-    header('Location: carrer.php');
+    
+    if($result)
+    {
+//        header('Location: carrer.php');
+        echo "<script>
+                alert('Successfully Applyed');
+                window.location.replace('carrer.php');
+            </script>";
+    }
+    
+    else 
+    {
+        echo "<script>
+                alert('Please Apply again');
+                window.location.replace('carrer.php');
+            </script>";
+    }
 ?>
